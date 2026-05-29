@@ -1,0 +1,147 @@
+# web-gugu
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phân Biệt Website và Webpage</title>
+  <style>
+    /* CSS nội bộ giúp giao diện dễ nhìn và trực quan hơn */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #34495e;
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: #1abc9c;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #2c3e50;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bài Thực Hành Web Đầu Tiên</h1>
+  </header>
+
+  <nav>
+    <a href="#">Trang chủ</a>
+    <a href="#gioi-thieu">Giới thiệu</a>
+    <a href="#lien-he">Liên hệ</a>
+  </nav>
+
+  <main>
+    <section id="gioi-thieu">
+      <h2>Phân biệt Website và Trang web (Webpage)</h2>
+      <p>Nhiều người thường nhầm lẫn giữa hai khái niệm này. Thực chất, chúng có mối quan hệ "tập hợp cha" và "tập hợp con".</p>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Tiêu chí</th>
+            <th>Trang web (Webpage)</th>
+            <th>Website</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Khái niệm</strong></td>
+            <td>Là một tài liệu đơn lẻ hiển thị trên trình duyệt (định dạng HTML/XHTML).</td>
+            <td>Là một tập hợp gồm nhiều trang web liên kết lại với nhau dưới một tên miền chung.</td>
+          </tr>
+          <tr>
+            <td><strong>Ví dụ thực tế</strong></td>
+            <td>Một bài báo cụ thể, trang "Liên hệ", hoặc trang "Giới thiệu" này.</td>
+            <td>Toàn bộ hệ thống VnExpress, Facebook, hoặc trang web trường học của bạn.</td>
+          </tr>
+          <tr>
+            <td><strong>Mối quan hệ</strong></td>
+            <td>Giống như một <strong>trang sách</strong> trong một cuốn sách.</td>
+            <td>Giống như <strong>nguyên một cuốn sách</strong> hoàn chỉnh.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <section id="lien-he">
+      <h2>Liên hệ với chúng tôi</h2>
+      <p>Nếu bạn có bất kỳ câu hỏi nào về bài học, vui lòng để lại thông tin bên dưới:</p>
+      <form onsubmit="return thongBao(event)">
+        <label for="name">Họ và tên:</label><br>
+        <input type="text" id="name" required style="width: 100%; padding: 8px; margin: 8px 0;"><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" required style="width: 100%; padding: 8px; margin: 8px 0;"><br>
+        
+        <button type="submit" style="background-color: #1abc9c; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px;">Gửi thông tin</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Bài thực hành HTML/CSS cơ bản.</p>
+  </footer>
+
+  <script>
+    function thongBao(event) {
+      event.preventDefault(); // Ngăn trang bị tải lại
+      const name = document.getElementById('name').value;
+      alert('Cảm ơn ' + name + '! Thông tin của bạn đã được ghi nhận (Giả định).');
+      return false;
+    }
+  </script>
+
+</body>
+</html>
